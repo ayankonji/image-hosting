@@ -14,7 +14,7 @@ import mimetypes
 
 # 配置信息
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', 'your_github_token_here')
-REPO_OWNER = os.environ.get('GITHUB_USERNAME', 'your_username')
+REPO_OWNER = os.environ.get('GITHUB_USERNAME', 'ayankonji')
 REPO_NAME = 'image-hosting'
 BRANCH = 'main'
 

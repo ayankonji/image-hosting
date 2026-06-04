@@ -29,7 +29,7 @@
 上传后，图片将可通过以下格式的URL访问：
 
 ```
-https://<username>.github.io/image-hosting/images/<filename>
+https://ayankonji.github.io/image-hosting/images/<filename>
 ```
 
 ### 3. 嵌入式设备集成
@@ -46,7 +46,7 @@ def upload_image(image_path):
 
 # 获取图片URL
 def get_image_url(filename):
-    return f"https://<username>.github.io/image-hosting/images/{filename}"
+    return f"https://ayankonji.github.io/image-hosting/images/{filename}"
 ```
 
 ## 目录结构

@@ -11,7 +11,7 @@ from pathlib import Path
 DEFAULT_CONFIG = {
     "github": {
         "token": os.environ.get('GITHUB_TOKEN', ''),
-        "username": os.environ.get('GITHUB_USERNAME', ''),
+        "username": os.environ.get('GITHUB_USERNAME', 'ayankonji'),
         "repo": "image-hosting",
         "branch": "main"
     },
