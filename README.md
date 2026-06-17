@@ -1,78 +1,25 @@
-# Image Hosting for AI Devices
+# ESP-Claw Image Hosting
 
-这是一个专为AI驱动的嵌入式设备设计的图片托管仓库。通过GitHub Pages提供图片直链URL，方便设备上传和访问图片。
-
-## 功能特点
-
-- 🖼️ 图片直链URL访问
-- 🤖 嵌入式设备友好
-- 🚀 GitHub Pages自动部署
-- 📁 简单的图片管理
-- 🔗 即插即用的API接口
-
-## 快速开始
-
-### 1. 上传图片
-
-使用提供的上传脚本：
-
-```bash
-# 上传单张图片
-./scripts/upload.sh /path/to/image.jpg
-
-# 批量上传图片
-./scripts/batch_upload.sh /path/to/images/
-```
-
-### 2. 获取直链URL
-
-上传后，图片将可通过以下格式的URL访问：
-
-```
-https://ayankonji.github.io/image-hosting/images/<filename>
-```
-
-### 3. 嵌入式设备集成
-
-在您的AI设备中使用以下代码示例：
-
-```python
-import requests
-
-# 上传图片
-def upload_image(image_path):
-    # 使用GitHub API上传
-    pass
-
-# 获取图片URL
-def get_image_url(filename):
-    return f"https://ayankonji.github.io/image-hosting/images/{filename}"
-```
+一个兼容 ESP-Skill 格式的图片托管仓库。
 
 ## 目录结构
 
+- `images/` — 托管的图片文件
+- `skills/` — ESP-Claw 技能
+
+## 使用方式
+
+### 上传图片
+
+通过 ESP-Claw 的 `image_hosting` 技能上传图片，需要提供 GitHub Personal Access Token。
+
+### 直接访问图片
+
+上传后的图片可通过以下格式访问：
 ```
-image-hosting/
-├── images/          # 图片存储目录
-├── scripts/         # 上传和管理脚本
-├── docs/            # 文档
-├── .github/         # GitHub Actions配置
-└── README.md        # 本文件
+https://raw.githubusercontent.com/ayankonji/image-hosting/main/images/<filename>
 ```
 
-## 使用场景
+## Token 说明
 
-- AI摄像头图片存储
-- 嵌入式设备图片上传
-- 物联网设备图片共享
-- 机器学习数据集托管
-
-## 注意事项
-
-- 图片文件名请使用英文和数字
-- 建议图片大小不超过10MB
-- 支持常见图片格式：JPG、PNG、GIF、WebP
-
-## 许可证
-
-MIT License
+本仓库不存储任何 token。使用前请自行生成 GitHub PAT（需要 `repo` 权限），并在调用技能时提供。
