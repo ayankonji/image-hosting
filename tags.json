@@ -1,5 +1,5 @@
 {
-  "tags": ["image", "hosting", "utility"],
-  "peripherals": [],
-  "categories": ["utility"]
+  "tags": ["info", "utility", "image"],
+  "peripherals": ["camera", "wifi"],
+  "categories": ["utility", "media"]
 }
